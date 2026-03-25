@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scrapy-plasmate"
+version = "0.1.0"
+description = "Scrapy downloader middleware powered by Plasmate's Semantic Object Model"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.9"
+authors = [
+    { name = "Plasmate Labs", email = "hello@plasmate.dev" },
+]
+keywords = ["scrapy", "plasmate", "web-scraping", "som", "semantic-object-model"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: Scrapy",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "scrapy>=2.7",
+]
+
+[project.urls]
+Homepage = "https://github.com/plasmate-labs/scrapy-plasmate"
+Repository = "https://github.com/plasmate-labs/scrapy-plasmate"
+Issues = "https://github.com/plasmate-labs/scrapy-plasmate/issues"
+Documentation = "https://plasmate.dev/docs/integrations/scrapy"
+
+[tool.setuptools.packages.find]
+include = ["scrapy_plasmate*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
